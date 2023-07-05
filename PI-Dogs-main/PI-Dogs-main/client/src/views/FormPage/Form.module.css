@@ -1,0 +1,173 @@
+.ul{
+    list-style-type: none;
+}
+
+.addDogs {    
+    /* background-image: url('../Images/background.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vw;
+    display:flex;
+    flex-direction: column;
+    background-image:url("https://img.freepik.com/fotos-premium/retrato-hermoso-perro-fondo-claro-ia-generativa_833971-19.jpg?w=1480");
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prettierForm {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: space-around;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 5px 1px rgb(12, 114, 36);
+    background-color: rgb(231, 218, 218, 0.3);
+}
+
+
+.submitButton {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(250, 249, 249);
+    background-color: #284B63;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px 1px #7D8597;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    color:#f8f9f4;
+    background-color: #5C677D;
+}
+
+.msg {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    flex-direction: column;
+    justify-content: center;    
+    color: #284B63;
+    
+    font-weight: 700;    
+    text-shadow: -0.05em 0.05em 0em #353535;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.msgs {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+    color: #284B63;
+    font-size: 1.35em;
+    font-weight: 700;    
+    text-shadow: -0.05em 0.05em 0em #353535;
+}
+
+.nameInput {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+   margin-right: 250px;
+ min-height: 20px;
+    margin-left: 250px;
+    min-width: 150px;
+   
+    border-radius: 2px;
+    background-color: #D9D9D9;
+}
+
+.checkSelect {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    flex-wrap: wrap;
+    padding: 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.temperamentTypes {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;    
+    color: rgb(231, 218, 218);
+    background-color: rgb(231, 218, 218, 0.3);
+    box-shadow: 3px 3px 5px 1px #284B63;
+}
+
+.checks {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1px;
+    font-size: 1em;
+    border-radius: 8px;
+    background-color: #284B63;
+    color: #f8f9f4;
+}
+
+.buttonX{
+    color:#284B63;
+    background-color: rgb(254, 248, 248);
+    cursor: pointer;
+  
+}
+.divTem{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #284B63;
+    font-size: 1.3em;
+    text-align:center;
+    margin: 6px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 6px 1px #353535;
+    display:inline-flex;
+    padding-right: 0.5%;
+  
+}
+.divTemperament{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #284B63;
+    box-shadow: 3px 3px 5px 1px #353535;
+    font-size: 20px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.errors {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}

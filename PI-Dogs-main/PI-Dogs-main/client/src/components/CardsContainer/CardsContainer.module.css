@@ -1,0 +1,18 @@
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    margin:0;
+    padding:0;
+}
+.divCard{
+    max-width:25vw;
+    height:auto;
+    margin:0;
+    padding:0;
+}
+
+.text {
+    color:brown;
+    font-size: 2em;
+}

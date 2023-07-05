@@ -1,0 +1,32 @@
+.link{
+    text-decoration:none;
+    color:#3C6E71;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title{
+    text-decoration:none;
+    color:#284B63;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.Card{
+    min-height:55vh;
+    max-height:70vh;
+    min-width: 20vh;
+    max-width: 50vh;
+    margin:2vh 0;
+    background-color:#D9D9D9;
+    padding:2vh 1vw;
+    border-radius:1em;
+    transition:transform 0.2s;
+}
+.cardImage{
+    max-width:75%;
+    min-height:50%; 
+  
+    border-radius:1em;
+    border:solid #3C6E71;
+   
+
+}

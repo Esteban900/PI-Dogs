@@ -60,7 +60,7 @@ const getDbInfo = async () => {
             weight_min: dog.weight_min,
             weight_max: dog.weight_max,
             life_span: dog.life_span,
-            temperaments: dog.temperaments?.map(temperament => temperament.name),
+            temperament: dog.temperaments?.map(temperament => temperament.name),
             createInBd : dog.createInBd,
         }
     });
