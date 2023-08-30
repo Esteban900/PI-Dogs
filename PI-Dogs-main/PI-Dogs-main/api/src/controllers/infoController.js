@@ -6,9 +6,10 @@ const axios = require ("axios");
 
 const getApiInfo =  async () => {
 
-    const apiUrl = await axios.get("https://api.thedogapi.com/v1/breeds");
+    const apiUrl = await axios.get("https://api.thedogapi.com/v1/breeds?api_key=live_acBlfO4zyrxL52ggvopR44GCOaM0heBFkzvhn3Aw1cmNfAorp4sA6uEKP0YDlzey");
     const apiData = apiUrl.data;
-    
+    console.log(apiData);
+
     
     const apiInfoDetail = await apiData.map( (el) => {
         return {
@@ -27,7 +28,7 @@ const getApiInfo =  async () => {
             temperament: el.temperament ? el.temperament.split(", ") : ["Not temperament"],
         }
     });
-
+//console.log(apiInfoDetail);
     return apiInfoDetail;
 
 };
