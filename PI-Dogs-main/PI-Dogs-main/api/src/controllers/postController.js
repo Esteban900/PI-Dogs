@@ -33,7 +33,7 @@ const newDog = await Dog.create({
     })
 
     newDog.addTemperament(temperamentBd);
-    return "Dogs creado con exito";
+    return "Dogs created successfully";
 
 };
 

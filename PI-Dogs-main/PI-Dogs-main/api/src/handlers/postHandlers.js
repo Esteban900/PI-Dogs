@@ -10,7 +10,7 @@ const createDogsHandler = async (req,res) => {
         if( !name || !image || !height_min || !height_max || !weight_min || !weight_max || !life_span || !temperaments.length) return res.status(400).json("Falta informacion");
 
         const newDog = await createDog (name, image, height_min, height_max, weight_min, weight_max, life_span, temperaments, createInBd);
-        return res.status(200).json( newDog );
+        return res.status(201).json( newDog );
 
     } catch (error) {
         res.status(400).json({ error: error.message });

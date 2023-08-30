@@ -5,7 +5,8 @@ const initialState = {
     dogs: [],
     allDogs:[],
     detail: [],
-    temperaments:[]
+    temperaments:[],
+    filterDogs: []
 };
 
 
@@ -18,6 +19,7 @@ const rootReducer = (state = initialState, action ) => {
             return {...state,
              dogs: action.payload,
             allDogs: action.payload,
+            filterDogs: action.payload,
             
      };
 
@@ -77,7 +79,8 @@ const rootReducer = (state = initialState, action ) => {
             })
             return {
                 ...state,
-                dogs: filterByTemperaments
+                dogs: filterByTemperaments,
+                filterDogs: filterByTemperaments
             }
 
 
@@ -98,12 +101,12 @@ const rootReducer = (state = initialState, action ) => {
 
         let dogsbyOrder;
         if(action.payload === "Ascending") {
-            dogsbyOrder = [ ...state.allDogs].sort((a,b) => {
+            dogsbyOrder = [ ...state.filterDogs].sort((a,b) => {
                 if(a.name > b.name) return 1;
                 else return -1;
             })
         } else {
-            dogsbyOrder = [...state.allDogs].sort((a,b) => {
+            dogsbyOrder = [...state.filterDogs].sort((a,b) => {
                 if(a.name < b.name) return 1;
                 else return -1;
             });
@@ -118,9 +121,9 @@ const rootReducer = (state = initialState, action ) => {
             let weightDogs;
             
             if(action.payload === "Ascending") {
-                weightDogs = [...state.allDogs].sort((a,b) => a.weight_max - b.weight_max);
+                weightDogs = [...state.filterDogs].sort((a,b) => a.weight_max - b.weight_max);
             } else {
-                weightDogs = [ ...state.allDogs].sort((a,b) => b.weight_max - a.weight_max);
+                weightDogs = [ ...state.filterDogs].sort((a,b) => b.weight_max - a.weight_max);
             }
 
             return {

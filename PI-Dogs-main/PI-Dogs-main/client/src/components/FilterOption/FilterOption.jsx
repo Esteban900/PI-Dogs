@@ -1,6 +1,7 @@
 import { getFilterByTemperaments, filterCreated, getFilterByOrder, orderByWeight } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 
+import style from "./FilterOption.module.css";
 
 
 const FilterOption = ( { temperamentsAll, setCurrentPage, setOrder} ) => {
@@ -38,18 +39,18 @@ const handlerFilterByWeight = (event) => {
     return (
         <>
             <>
-                <select defaultValue="Filter by Id" onChange={ e => handlerFilterById(e)}>
+                <select defaultValue="Filter by Id" onChange={ e => handlerFilterById(e)} className={style.checks}>
                     <option>Filter By Id</option>
                     
                     <option key = "All" value = "All">All Dogs</option>
-                    <option key = "Created" value = "Created">Dogs create ind database</option>
+                    <option key = "Created" value = "Created">Dogs create BDD</option>
                     <option key = "apiId" value = "apiId">Api Dogs</option>
                 </select>
             </> 
         
 
             <>
-                <select defaultValue="Filter by type" onChange={ e => handlerFilterByTemperaments(e)}>
+                <select defaultValue="Filter by type" onChange={ e => handlerFilterByTemperaments(e)} className={style.checks}>
 
                 <option>Filter by type: </option>
                 {temperamentsAll?.map( (temps) => <option key={temps.name} value={temps.name}> {temps.name}
@@ -61,16 +62,16 @@ const handlerFilterByWeight = (event) => {
 
 
             <>
-            <select defaultValue="Filter by weight" onChange={ ev => handlerFilterByWeight(ev)}>
-                <option>Filter by weight max</option>
+            <select defaultValue="Order by weight" onChange={ ev => handlerFilterByWeight(ev)} className={style.checks}>
+                <option>Order by weight max</option>
                 <option key="asc" value="Ascending">Ascending</option>
                 <option key="des" value="Descending">Descending</option>
             </select>
             </>
 
             <>
-            <select defaultValue="Filter by name" onChange={ ev => handlerFilterByOrder(ev)}>
-                <option>Filter by Name</option>
+            <select defaultValue="Order by name" onChange={ ev => handlerFilterByOrder(ev)} className={style.checks}>
+                <option>Order by Name</option>
                 <option key="asc" value="Ascending">Ascending</option>
                 <option key="des" value="Descending">Descending</option>
             </select>

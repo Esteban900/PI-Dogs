@@ -1,0 +1,12 @@
+.checks {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     /* display: flex; */
+    flex-direction: row;
+    justify-content: center; 
+    padding: 1px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    background-color: #284B63;
+    color: #f8f9f4;
+    align-items: center;
+}
