@@ -9,18 +9,24 @@ import axios from "axios";
  export const FILTER_BY_CREATED = "FILTER_BY_CREATED";
  export const FILTER_BY_ORDER = "FILTER_BY_ORDER";
  export const FILTER_BY_WEIGHT = "FILTER_BY_WEIGHT";
+ export const CLEAR_DETAIL = "CLEAR_DETAIL";
 
  //ALLDOGS
 export const getDogsAll = () => {
-
+    
     return async function (dispatch) {
-        const dataDogs = await axios.get("http://localhost:3001/dogs");
-
-        const dogsData = dataDogs.data;
-        return dispatch({
-            type: GET_DOGS_ALL,
-            payload: dogsData
-        });
+    try {
+            const dataDogs = await axios.get("http://localhost:3001/dogs");
+    
+            const dogsData = dataDogs.data;
+            return dispatch({
+                type: GET_DOGS_ALL,
+                payload: dogsData
+            });
+            
+        } catch (error) {
+            alert(error.message)
+        }
     };
 };
 
@@ -121,5 +127,11 @@ export const orderByWeight = (payload) => {
     return {
         type: FILTER_BY_WEIGHT,
         payload: payload
+    }
+}
+
+export const clearDetail = () => {
+    return {
+        type: CLEAR_DETAIL,
     }
 }

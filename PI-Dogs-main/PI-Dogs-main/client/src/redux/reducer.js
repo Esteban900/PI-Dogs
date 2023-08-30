@@ -1,4 +1,4 @@
-import { GET_DOGS_ALL, GET_DOG_DETAIL, GET_TEMPERAMENTS, GET_NAME_DOGS, FILTER_BY_NAME, FILTER_BY_TEMPERAMENTS, FILTER_BY_CREATED, FILTER_BY_WEIGHT, FILTER_BY_ORDER } from "./actions";
+import { GET_DOGS_ALL, GET_DOG_DETAIL, GET_TEMPERAMENTS, GET_NAME_DOGS, FILTER_BY_NAME, FILTER_BY_TEMPERAMENTS, FILTER_BY_CREATED, FILTER_BY_WEIGHT, FILTER_BY_ORDER, CLEAR_DETAIL } from "./actions";
 
 
 const initialState = {
@@ -131,6 +131,11 @@ const rootReducer = (state = initialState, action ) => {
                 dogs: weightDogs
             }
 
+            case CLEAR_DETAIL:
+                return {
+                    ...state,
+                    detail:[]
+                }
 
 
 
