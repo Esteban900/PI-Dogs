@@ -26,12 +26,12 @@ const Detail = () => {
         <br></br>
     <br></br>
     <h1 className={style.Name}>{dogDetail.name}</h1>
-    <h2 className={style.Value}>{dogDetail.id}</h2>
+    <h2 className={style.Value}>ID: {dogDetail.id}</h2>
         <div className={style.Data} >
   <div style={{ flex: "1" }}>
    
     <div className={style.Container}>
-      <h2 className={style.Title}>Weight</h2>
+      <h2 className={style.Title}>Height</h2>
       <h3 className={style.Value}>
         {dogDetail.height_min} cm - {dogDetail.height_max} cm
       </h3>
