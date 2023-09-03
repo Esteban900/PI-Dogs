@@ -24,7 +24,7 @@ const Detail = () => {
     return (
     <div>  
         <br></br>
-    <br></br>
+    {/* <br></br> */}
     <h1 className={style.Name}>{dogDetail.name}</h1>
     <h2 className={style.Value}>ID: {dogDetail.id}</h2>
         <div className={style.Data} >
@@ -49,13 +49,13 @@ const Detail = () => {
       <h2 className={style.Value}>{dogDetail.life_span}</h2>
     </div>
 
-    <div className={style.Container}>
+    <div className={style.ContainerTemperament}>
       <h2 className={style.Title}>Temperament</h2>
       <ul>
         {Array.isArray(dogDetail.temperament) ? (
           dogDetail.temperament.map((temp, index) => {
             return (
-              <li className={style.Temperament} key={index}>
+              <li className={style.divTem} key={index}>
                 {temp}
               </li>
             );
