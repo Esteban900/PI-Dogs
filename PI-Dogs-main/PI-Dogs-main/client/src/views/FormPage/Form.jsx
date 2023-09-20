@@ -360,7 +360,7 @@ const Form = () => {
             </div>
             )}
     <div>
-        <button className={style.submitButton} type="submit" >Crear Dogs</button>
+        <button className={style.submitButton} type="submit" >Create Dogs</button>
         </div>
         </form>
        
